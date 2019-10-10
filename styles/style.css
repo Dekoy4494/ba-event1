@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+.container{
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+
+}
+
+.ba-header{                             /* Занимает пустое место картинкой и подтягивает ее снизу */
+    position: absolute;
+    width: 100%;
+}
+.ba-header a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.ba-header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ba-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.ba-menu__item{
+    margin-left: 30px;
+}
+
+.ba-menu__link{
+    padding-bottom: 6px;
+    transition: .3s;
+                                             /*  border-bottom: 0px solid transparent;    transparent это безцветный (cоздание выезжающей нижней линии под текстом) */
+    overflow: hidden;
+    display: block;
+}
+.ba-menu__link::after{
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #e71cb4;
+    transform: translateX(-102%);
+    transition: transform .4s;
+}
+.ba-menu__link:hover,
+.ba-menu__link:focus{
+                                            /* border-bottom: 4px solid #e71cb4; */
+    color: #e71cb4;
+}
+
+.ba-menu__link:hover:after,
+.ba-menu__link:focus:after{
+    transform: translateX(0);
+    transition-timing-function: cubic-bezier(0.42, -0.12, 0.58, 1);
+}
+
+
+.ba-hero{
+    min-height: 100vh;
+    background-image: url(../img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-color: black;
+    color: #ffffff;
+    padding: 270px 0 260px;
+    text-align: center;
+}
+
+.ba-btn{
+    height: 50px;                   /* Вот так можно сделать выравнивание по вертикали по центру */
+    line-height: 50px;
+    border: 2px solid  #ffffff;
+    border-radius: 10px;
+    padding: 0 2.6875em;
+    color: #ffffff ;
+    display: inline-block;
+    text-decoration: none;
+
+}
